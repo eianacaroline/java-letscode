@@ -8,7 +8,9 @@ public class Main {
 
     public static void main(String[] args) {
 	    String name = "Ana";
-        System.out.println("Hello World, " + name);
+        int idade = 21;
+        float altura = 1.68f;
+        System.out.printf("Meu nome é %s, tenho %d anos e %.2f de altura %n", name, idade, altura);
 
         AreaQuadrado areaQuadrado = new AreaQuadrado();
         System.out.println("Valor da área: " + areaQuadrado.area);
