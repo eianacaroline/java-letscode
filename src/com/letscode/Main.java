@@ -23,13 +23,13 @@ public class Main {
 //        System.out.println("Estes são os elementos de avatar: " + java.util.Arrays.asList(Avatar.Elements.values()));
 
         Scanner inputUser = new Scanner(System.in);
-        double DOLAR = 5.65f;
-        double EURO = 6.39f;
+        double dolar = 5.65f;
+        double euro = 6.39f;
 
         System.out.println("Informe a seguir o valor em real que deseja converter: ");
-        double REAL = inputUser.nextDouble();
+        double real = inputUser.nextDouble();
 
-        System.out.printf("O valor informado foi: R$%.2f%nVocê possui $%.2f dólares e €%.2f euros", REAL, REAL*DOLAR, REAL*EURO);
+        System.out.printf("O valor informado foi: R$%.2f%nVocê possui $%.2f dólares e €%.2f euros", real, real*dolar, real*euro);
 //        System.out.println("Informe seu nome: ");
 //        String nameUser = inputUser.nextLine();
 //
