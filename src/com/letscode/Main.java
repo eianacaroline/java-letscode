@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Informe a seguir o valor em real que deseja converter: ");
         double real = inputUser.nextDouble();
 
-        System.out.printf("O valor informado foi: R$%.2f%nVocê possui $%.2f dólares e €%.2f euros", real, real*dolar, real*euro);
+        System.out.printf("O valor informado foi: R$%.2f%nVocê possui $%.2f dólares e €%.2f euros", real, dolar/real, euro/real);
 //        System.out.println("Informe seu nome: ");
 //        String nameUser = inputUser.nextLine();
 //
