@@ -24,6 +24,13 @@ public class Main {
 
         Scanner inputUser = new Scanner(System.in);
 
+        System.out.println("Informe a temperatura em celsius(ºC) que deseja converter para fahrenheit(°F): ");
+        float celsius = inputUser.nextFloat();
+        float fahrenheit = celsius*9/5+32;
+
+        System.out.printf("A temperatura informada foi: " + celsius + "ºC, o valor convertido em fahrenheit: " + fahrenheit + "ºF");
+
+/*
         System.out.println("Informe um número entre 1 e 10: ");
         int numeroInformado = inputUser.nextInt();
 
@@ -37,7 +44,7 @@ public class Main {
         System.out.println(numeroInformado + "x 7 = " + numeroInformado*7);
         System.out.println(numeroInformado + "x 8 = " + numeroInformado*8);
         System.out.println(numeroInformado + "x 9 = " + numeroInformado*9);
-        System.out.println(numeroInformado + "x 10 = " + numeroInformado*10);
+        System.out.println(numeroInformado + "x 10 = " + numeroInformado*10);*/
 /*
         System.out.println("Digite abaixo o primeiro número: ");
         int numeroUm = inputUser.nextInt();
