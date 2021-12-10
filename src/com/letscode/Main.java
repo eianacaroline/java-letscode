@@ -23,13 +23,26 @@ public class Main {
 //        System.out.println("Estes são os elementos de avatar: " + java.util.Arrays.asList(Avatar.Elements.values()));
 
         Scanner inputUser = new Scanner(System.in);
-        float dolar = 5.65f;
-        float euro = 6.39f;
 
-        System.out.println("Informe a seguir o valor em real que deseja converter: ");
-        float real = inputUser.nextFloat();
+        System.out.println("Digite abaixo o primeiro número: ");
+        int numeroUm = inputUser.nextInt();
 
-        System.out.printf("O valor informado foi: R$%.2f%nVocê possui $%.2f dólares e €%.2f euros", real, real/dolar, real/euro);
+        System.out.println("Digite abaixo o segundo número: ");
+        int numeroDois = inputUser.nextInt();
+
+        System.out.printf("Soma: %d %nSubtração: %d %nMultiplicação: %d %nDivisão: %d%n", numeroUm+numeroDois, numeroUm-numeroDois, numeroUm*numeroDois, numeroUm/numeroDois);
+
+//        final double convertLb = 2.20462;
+//        final double kilo = 1000;
+//        System.out.printf("%skg convertidos para libra ficam em %slb", kilo, kilo*convertLb);
+
+        //final float dolar = 5.65f;
+        //final float euro = 6.39f;
+
+        //System.out.println("Informe a seguir o valor em real que deseja converter: ");
+        //float real = inputUser.nextFloat();
+
+        //System.out.printf("O valor informado foi: R$%.2f%nVocê possui $%.2f dólares e €%.2f euros", real, real/dolar, real/euro);
 
 
 //        System.out.println("Informe seu nome: ");
