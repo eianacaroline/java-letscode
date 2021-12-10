@@ -24,13 +24,19 @@ public class Main {
 
         Scanner inputUser = new Scanner(System.in);
 
-        System.out.print("Informe a cotação atual do dolar: ");
+        System.out.print("Informe o valor em polegadas que deseja converter para centímetros: ");
+        float polegadas = inputUser.nextFloat();
+        float centimetros = polegadas*2.54f;
+
+        System.out.printf("Esse foi o valor informado: %.2fin, o valor em centímetros é de %.2fcm", polegadas, centimetros);
+
+/*        System.out.print("Informe a cotação atual do dolar: ");
         final double cotacaoDolar = inputUser.nextDouble();
 
         System.out.print("Informe o valor que deseja converter: ");
         double dolar = inputUser.nextDouble();
 
-        System.out.printf("O valor informado foi: $%.2f, a conversão para real é: R$%.2f", dolar, cotacaoDolar*dolar);
+        System.out.printf("O valor informado foi: $%.2f, a conversão para real é: R$%.2f", dolar, cotacaoDolar*dolar);*/
 
 
 /*        System.out.println("Informe a temperatura em celsius(ºC) que deseja converter para fahrenheit(°F): ");
