@@ -24,6 +24,21 @@ public class Main {
 
         Scanner inputUser = new Scanner(System.in);
 
+        System.out.println("Informe um número entre 1 e 10: ");
+        int numeroInformado = inputUser.nextInt();
+
+        System.out.printf("Essa é a tabuada do número %d %n", numeroInformado);
+        System.out.println(numeroInformado + "x 1 = " + numeroInformado*1);
+        System.out.println(numeroInformado + "x 2 = " + numeroInformado*2);
+        System.out.println(numeroInformado + "x 3 = " + numeroInformado*3);
+        System.out.println(numeroInformado + "x 4 = " + numeroInformado*4);
+        System.out.println(numeroInformado + "x 5 = " + numeroInformado*5);
+        System.out.println(numeroInformado + "x 6 = " + numeroInformado*6);
+        System.out.println(numeroInformado + "x 7 = " + numeroInformado*7);
+        System.out.println(numeroInformado + "x 8 = " + numeroInformado*8);
+        System.out.println(numeroInformado + "x 9 = " + numeroInformado*9);
+        System.out.println(numeroInformado + "x 10 = " + numeroInformado*10);
+/*
         System.out.println("Digite abaixo o primeiro número: ");
         int numeroUm = inputUser.nextInt();
 
@@ -31,10 +46,13 @@ public class Main {
         int numeroDois = inputUser.nextInt();
 
         System.out.printf("Soma: %d %nSubtração: %d %nMultiplicação: %d %nDivisão: %d%n", numeroUm+numeroDois, numeroUm-numeroDois, numeroUm*numeroDois, numeroUm/numeroDois);
+*/
 
-//        final double convertLb = 2.20462;
-//        final double kilo = 1000;
-//        System.out.printf("%skg convertidos para libra ficam em %slb", kilo, kilo*convertLb);
+/*
+        final double convertLb = 2.20462;
+        final double kilo = 1000;
+        System.out.printf("%skg convertidos para libra ficam em %slb", kilo, kilo*convertLb);
+*/
 
         //final float dolar = 5.65f;
         //final float euro = 6.39f;
