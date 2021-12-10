@@ -24,11 +24,20 @@ public class Main {
 
         Scanner inputUser = new Scanner(System.in);
 
-        System.out.println("Informe a temperatura em celsius(ºC) que deseja converter para fahrenheit(°F): ");
+        System.out.print("Informe a cotação atual do dolar: ");
+        final double cotacaoDolar = inputUser.nextDouble();
+
+        System.out.print("Informe o valor que deseja converter: ");
+        double dolar = inputUser.nextDouble();
+
+        System.out.printf("O valor informado foi: $%.2f, a conversão para real é: R$%.2f", dolar, cotacaoDolar*dolar);
+
+
+/*        System.out.println("Informe a temperatura em celsius(ºC) que deseja converter para fahrenheit(°F): ");
         float celsius = inputUser.nextFloat();
         float fahrenheit = celsius*9/5+32;
 
-        System.out.printf("A temperatura informada foi: " + celsius + "ºC, o valor convertido em fahrenheit: " + fahrenheit + "ºF");
+        System.out.printf("A temperatura informada foi: " + celsius + "ºC, o valor convertido em fahrenheit: " + fahrenheit + "ºF");*/
 
 /*
         System.out.println("Informe um número entre 1 e 10: ");
