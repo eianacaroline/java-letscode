@@ -2,18 +2,74 @@ package com.letscode;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Battleship {
     public static void main (String[] args) {
         int tamanhoTabuleiro = 10;
         char navio = 'N';
-        char tiroCerteiro = '*';
         char agua = '-';
         char acerto = 'X';
-        char aguaNavio = 'n';
+        char erro = 'O';
         int naviosTotal = 10;
         char[][] tabuleiro = createTabuleiro(tamanhoTabuleiro, agua, navio, naviosTotal);
         printTabuleiro(tabuleiro, agua, navio);
+        int naviosEscondidos = naviosTotal;
+        while (naviosEscondidos > 0) {
+            int[] guessCoordenadas = getCoodernadasJogador(tamanhoTabuleiro);
+            char localizacaoUpdate = evaluateGuesAndGetTarget(guessCoordenadas, tabuleiro, navio, agua, acerto, erro);
+            if (localizacaoUpdate == acerto) {
+                naviosEscondidos--;
+            }
+            tabuleiro = updateTabuleiro(tabuleiro, guessCoordenadas, localizacaoUpdate);
+            printTabuleiro(tabuleiro, agua, navio);
+        }
+        System.out.print("VocÊ ganhou!");
+    }
+
+    private static char[][] updateTabuleiro(char[][] tabuleiro, int[] guessCoordenadas, char localizacaoUpdate) {
+        int row = guessCoordenadas[0];
+        int col = guessCoordenadas[1];
+
+        tabuleiro[row][col] = localizacaoUpdate;
+        return tabuleiro;
+    }
+
+    private static char evaluateGuesAndGetTarget(int[] guessCoordenadas, char[][] tabuleiro, char navio, char agua, char acerto, char erro) {
+        String mensagem;
+        int row = guessCoordenadas[0];
+        int col = guessCoordenadas[1];
+        char target = tabuleiro[row][col];
+        if (target == navio) {
+            mensagem = "Acertou!";
+            target = acerto;
+        }
+
+        else if (target == agua){
+            mensagem = "Errou!";
+            target = erro;
+        }
+
+        else {
+            mensagem = "Atire!";
+        }
+        System.out.println(mensagem);
+        return target;
+    }
+
+    private static int[] getCoodernadasJogador(int tamanhoTabuleiro) {
+        int row;
+        int col;
+        do {
+            System.out.print("Linha: ");
+            row = new Scanner(System.in).nextInt();
+        }
+        while ( row < 0 || row > tamanhoTabuleiro);
+        do {
+            System.out.print("Coluna: ");
+            col = new Scanner(System.in).nextInt();
+        } while (col < 0 || col > tamanhoTabuleiro);
+        return new int[] {row, col};
     }
 
     private static void printTabuleiro(char[][] tabuleiro, char agua, char navio) {
